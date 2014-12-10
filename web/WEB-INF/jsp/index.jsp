@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>index.jsp</h1>
+<h1>index.jsp (inside WEB-INF)</h1>
 
 </body>
 </html>
