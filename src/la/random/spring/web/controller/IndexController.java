@@ -16,7 +16,8 @@ public class IndexController {
 	@RequestMapping("/index")
 	public String index(){
 		System.out.println(className + ".index()");
-		return "/WEB-INF/jsp/index.jsp";
+		// the following points to the entry in general.xml
+		return "index";
 	}
 
 }
