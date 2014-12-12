@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/blog_aggregator</property>
+        <property name="hibernate.connection.username">username</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <property name="hibernate.current_session_context_class">thread</property>
+        
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">10</property>
+        
+        <!-- Disable the second-level cache -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        
+        <!-- Echo all executed SQL to stout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and recreate the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+        
+         <!-- format sql -->
+        <!-- <property name="format_sql">true</property> -->
+        <!-- <property name="use_sql_comments">true</property> -->
+        
+        
+        <mapping class="la.random.web.entity.User"/>
+<!--         <mapping class="la.random.web.entity.Blog"/> -->
+<!--         <mapping class="la.random.web.entity.Role"/> -->
+<!--         <mapping class="la.random.web.entity.Item"/> -->
+        
+        
+    </session-factory>
+</hibernate-configuration>
