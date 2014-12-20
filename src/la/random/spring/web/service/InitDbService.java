@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 import javax.annotation.PostConstruct;
+import javax.transaction.Transactional;
 
 import la.random.spring.web.entity.Role;
 import la.random.spring.web.entity.User;
@@ -19,6 +20,7 @@ import la.random.spring.web.repository.BlogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Transactional
 @Service
 public class InitDbService {
 
